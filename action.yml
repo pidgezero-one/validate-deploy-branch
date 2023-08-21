@@ -14,6 +14,6 @@ runs:
   steps:
     - uses: thehanimo/pr-title-checker@v1.3.7
       with:
-        GITHUB_TOKEN: ${{inputs.github_token}}
+        GITHUB_TOKEN: ${{inputs.token}}
         pass_on_octokit_error: false
         configuration_path: "${{github.action_path}}/pr-title-checker-config-${{inputs.environment}}.json"
