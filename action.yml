@@ -1,0 +1,19 @@
+name: "Check deployment PR title"
+
+inputs:
+  environment:
+    description: staging, prod, or publish
+    default: 'staging'
+  token:
+    description: github token
+    default: ''
+
+
+runs:
+  using: "composite"
+  steps:
+    - uses: thehanimo/pr-title-checker@v1.3.7
+      with:
+        GITHUB_TOKEN: ${{inputs.github_token}}
+        pass_on_octokit_error: false
+        configuration_path: "${{github.action_path}}/pr-title-checker-config-${{inputs.environment}}.json"

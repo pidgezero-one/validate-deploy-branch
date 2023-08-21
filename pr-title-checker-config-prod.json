@@ -1,0 +1,14 @@
+{
+  "LABEL": {
+    "name": "",
+    "color": "EEEEEE"
+  },
+  "CHECKS": {
+    "regexp": "^\\[DEPLOY\\]\\[PROD\\](?: v\\d+.\\d+.\\d+)?$"
+  },
+  "MESSAGES": {
+    "success": "Title validated",
+    "failure": "Title does not follow expected format",
+    "notice": ""
+  }
+}
