@@ -12,7 +12,10 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - uses: thehanimo/pr-title-checker@v1.3.7
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Validate
+      uses: thehanimo/pr-title-checker@v1.3.7
       with:
         GITHUB_TOKEN: ${{inputs.token}}
         pass_on_octokit_error: false
